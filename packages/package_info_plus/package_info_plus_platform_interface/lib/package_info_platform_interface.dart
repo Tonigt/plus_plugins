@@ -33,4 +33,8 @@ abstract class PackageInfoPlatform extends PlatformInterface {
   Future<PackageInfoData> getAll() {
     throw UnimplementedError('getAll() has not been implemented.');
   }
+
+  Future<Map<String, dynamic>> getPlistInfo() {
+    throw UnimplementedError('getPlistInfo() has not been implemented.');
+  }
 }

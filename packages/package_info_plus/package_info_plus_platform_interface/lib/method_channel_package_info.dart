@@ -19,4 +19,9 @@ class MethodChannelPackageInfo extends PackageInfoPlatform {
       buildSignature: map['buildSignature'] ?? '',
     );
   }
+
+  Future<Map<String, dynamic>> getPlistInfo() async{
+    var result = await _channel.invokeMapMethod<String, dynamic>("getPlistInfo") ?? <String, dynamic>{};
+    return result;
+  }
 }

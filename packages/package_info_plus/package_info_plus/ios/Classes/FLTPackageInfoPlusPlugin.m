@@ -24,7 +24,9 @@
       @"buildNumber" : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
           ?: [NSNull null],
     });
-  } else {
+  } else if ([call.method isEqualToString:@"getPlistInfo"]){
+    result([[NSBundle mainBundle] infoDictionary]);
+  }else{
     result(FlutterMethodNotImplemented);
   }
 }
